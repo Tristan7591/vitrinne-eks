@@ -108,4 +108,8 @@ app.include_router(router, prefix="/api")
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to CollabSync API"} 
+    return {"message": "Welcome to CollabSync API"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"} 
