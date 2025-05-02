@@ -19,7 +19,7 @@ app = FastAPI(title="CollabSync API")
 # Configuration CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Frontend React
+    allow_origins=["http://localhost", "http://localhost:80"],  # Frontend Nginx
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
